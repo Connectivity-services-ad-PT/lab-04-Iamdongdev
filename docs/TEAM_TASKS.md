@@ -1,34 +1,34 @@
-# TEAM_TASKS.md – Việc cần làm theo nhóm
+# TEAM_TASKS.md - Viec can lam theo nhom
 
-Mỗi nhóm bắt đầu từ repo mẫu này và thay phần IoT bằng service của mình.
-
----
-
-## Việc chung cho mọi nhóm
-
-- [ ] Copy contract từ Lab 03 vào thư mục `contracts/`.
-- [ ] Đảm bảo service có `GET /health`.
-- [ ] Viết hoặc cập nhật `Dockerfile`.
-- [ ] Viết `.dockerignore`.
-- [ ] Viết `.env.example`.
-- [ ] Viết `RUN_LOCAL.md`.
-- [ ] Build image.
-- [ ] Run container.
-- [ ] Chạy Postman Collection từ Lab 03 trên container.
-- [ ] Xuất Newman report.
-- [ ] Chụp bằng chứng `/health` hoặc log container.
-- [ ] Ghi tag image đã push.
+Moi nhom bat dau tu repo mau nay va thay phan IoT bang service cua minh.
 
 ---
 
-## Gợi ý theo service
+## Viec chung cho moi nhom
 
-| Service | Điểm cần chú ý |
+- [x] Copy contract tu Lab 03 vao thu muc `contracts/`.
+- [x] Dam bao service co `GET /health`.
+- [x] Viet hoac cap nhat `Dockerfile`.
+- [x] Viet `.dockerignore`.
+- [x] Viet `.env.example`.
+- [x] Viet `RUN_LOCAL.md`.
+- [x] Build image.
+- [x] Run container.
+- [x] Chay Postman Collection tu Lab 03/Lab 04 tren container.
+- [x] Xuat Newman report.
+- [x] Ghi bang chung `/health` va log container trong `reports/docker-evidence.md`.
+- [x] Ghi tag image: `fit4110/iot-ingestion:v0.1.0-team-iot`.
+
+---
+
+## Goi y theo service
+
+| Service | Diem can chu y |
 |---|---|
-| IoT Ingestion | API nhận telemetry, auth token, `/health`, test boundary nhiệt độ |
-| Camera Stream | Dùng `opencv-python-headless`, chuẩn bị 1 ảnh mẫu, chưa cần RTSP thật |
-| Access Gate | Nếu chưa có DB trong Lab 04, dùng in-memory hoặc DB ngoài; Compose để Buổi 5 |
-| AI Vision | Có thể dùng mock model hoặc YOLOv8n nhỏ; kiểm soát dung lượng image |
-| Analytics | Nhận event JSON giả; TimescaleDB để Buổi 5 |
-| Core Business | Policy evaluation chạy bằng config/env |
-| Notification | Channel mock là đủ; không commit Telegram/email token thật |
+| IoT Ingestion | API nhan telemetry, auth token, `/health`, test boundary nhiet do |
+| Camera Stream | Dung `opencv-python-headless`, chuan bi 1 anh mau, chua can RTSP that |
+| Access Gate | Neu chua co DB trong Lab 04, dung in-memory hoac DB ngoai; Compose de Buoi 5 |
+| AI Vision | Co the dung mock model hoac YOLOv8n nho; kiem soat dung luong image |
+| Analytics | Nhan event JSON gia; TimescaleDB de Buoi 5 |
+| Core Business | Policy evaluation chay bang config/env |
+| Notification | Channel mock la du; khong commit Telegram/email token that |
